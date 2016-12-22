@@ -145,7 +145,7 @@ Default application server configuration
 var PORT             = 5555;
 var LIVE_RELOAD_PORT = 4002;
 var DOCS_PORT        = 4003;
-var APP_BASE         = '/';
+var APP_BASE         = '/dashboard';
 ```
 
 Configure at runtime

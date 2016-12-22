@@ -13,8 +13,14 @@ import {
   RouterTestingModule
 } from '@angular/router/testing';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+// import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { HappeningComponent } from './happening/happening.component';
+import { FastFilterComponent } from './fastfilter/fastfilter.component';
+import { CodeComponent } from './code/code.component';
+import { GanttComponent } from './gantt/gantt.component';
+import { HitogramaComponent } from './hitograma/hitograma.component';
 import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
@@ -23,17 +29,22 @@ export function main() {
   describe('App component', () => {
 
     let config: Route[] = [
-      { path: '', component: HomeComponent },
-      { path: 'about', component: AboutComponent }
+      { path: 'dashboard', component: DashboardComponent },
+      // { path: '', component: HomeComponent },
+      { path: 'about', component: AboutComponent },
+      { path: 'happening', component: HappeningComponent },
+      { path: 'fastfilter', component: FastFilterComponent },
+      { path: 'code', component: CodeComponent },
+      { path: 'gantt', component: GanttComponent },
+      { path: 'hitograma', component: HitogramaComponent }
     ];
     beforeEach(() => {
       TestBed.configureTestingModule({
         imports: [FormsModule, RouterTestingModule.withRoutes(config)],
         declarations: [TestComponent, ToolbarComponent,
-          NavbarComponent, AppComponent,
-          HomeComponent, AboutComponent],
+          NavbarComponent, AppComponent, AboutComponent],
         providers: [
-          { provide: APP_BASE_HREF, useValue: '/' }
+          { provide: APP_BASE_HREF, useValue: '/dashboard' }
         ]
       });
     });
