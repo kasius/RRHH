@@ -144,7 +144,7 @@ export class SeedConfig {
    * `index.html`.
    * @type {string}
    */
-  APP_TITLE = 'Relay Race 2 &trade;';
+  APP_TITLE = 'RRHH Orbis &trade;';
 
   /**
    * The base folder of the applications source files.
